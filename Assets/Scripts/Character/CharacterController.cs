@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class CharacterController : MonoBehaviour
 {
-
-
     public float moveSpeed = 5f;
     public float jumpSpeed = 5f;
     public float gravityMaxSpeed = -20f;
@@ -17,22 +13,15 @@ public class CharacterController : MonoBehaviour
     //Movement
     private Vector3 velocity = Vector3.zero;
 
-
     //Camera 
     private Transform cameraTransform;
     private Vector3 nonTiltedCameraDirection;
     private Quaternion nonTiltedCameraRotation;
 
-
     private void Awake()
     {
         playerRigidbody = GetComponent<Rigidbody>();
         cameraTransform = Camera.main.transform;
-    }
-
-    private void Start()
-    {
-        
     }
 
     private void Update()
