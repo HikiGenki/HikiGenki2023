@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraMouseControlled : MonoBehaviour
 {
     [SerializeField]
     private CameraControllerSettings settings;
@@ -8,15 +8,6 @@ public class CameraController : MonoBehaviour
     private const string LookButtonName = "Look";
 
     private float cameraDist = 10f;
-
-    private void Awake()
-    {
-    }
-
-    private void Start()
-    {
-
-    }
 
     private void Update()
     {
@@ -37,10 +28,6 @@ public class CameraController : MonoBehaviour
 
         //Set position
         transform.localPosition = transform.rotation * new Vector3(0f, settings.yOffset, -cameraDist);
-        //transform.rotation = transform.localRotation * Quaternion.Euler(0f, mouseX * rotationSpeed * Time.deltaTime, 0f);
-
-
-        //Input.mouseScrollDelta.y
     }
 
     public Vector3 GetUntiltedForwardDirection()
@@ -48,10 +35,5 @@ public class CameraController : MonoBehaviour
         var untiltedForward = transform.forward;
         untiltedForward.y = 0;
         return untiltedForward;
-    }
-
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(20, 20, 200, 20), "mouse wheel " + Input.GetAxis("Mouse ScrollWheel"));
     }
 }
