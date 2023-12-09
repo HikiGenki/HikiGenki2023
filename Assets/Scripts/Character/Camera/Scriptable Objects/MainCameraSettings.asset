@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: MainCameraSettings
   m_EditorClassIdentifier: 
   panSpeed: 2000
-  freeLookTiltSpeed: 60
+  freeLookTiltSpeed: 600
   freeLookMinTiltAngle: 2
   freeLookMaxTiltAngle: 75
-  freeLookInterpolationSpeed: 20
+  freeLookInterpolationSpeed: 50
   zoomSpeed: 65
   minZoomDistance: 2
   maxZoomDistance: 15
-  followBehindInterpolationSpeed: 5
+  followBehindInterpolationSpeed: 1
   followBehindTiltAngle: 20
   yOffset: 1
